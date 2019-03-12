@@ -16,12 +16,27 @@ namespace LDEditor
         {
             InitializeComponent();
         }
-
+        public class FirstControl : Control
+        {
+            public FirstControl()
+            {
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
         }

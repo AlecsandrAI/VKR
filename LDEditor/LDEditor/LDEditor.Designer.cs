@@ -33,6 +33,8 @@
             this.menuStdLD = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lDProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,9 +74,8 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.справкаToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.проектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lDProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.menuStdLD.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +89,7 @@
             this.справкаToolStripMenuItem});
             this.menuStdLD.Location = new System.Drawing.Point(0, 0);
             this.menuStdLD.Name = "menuStdLD";
-            this.menuStdLD.Size = new System.Drawing.Size(800, 24);
+            this.menuStdLD.Size = new System.Drawing.Size(1268, 24);
             this.menuStdLD.TabIndex = 5;
             this.menuStdLD.Text = "menuStrip1";
             this.menuStdLD.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -120,6 +121,20 @@
             this.создатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.создатьToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.создатьToolStripMenuItem.Text = "&Создать";
+            // 
+            // проектToolStripMenuItem
+            // 
+            this.проектToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lDProgrammToolStripMenuItem});
+            this.проектToolStripMenuItem.Name = "проектToolStripMenuItem";
+            this.проектToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.проектToolStripMenuItem.Text = "Проект";
+            // 
+            // lDProgrammToolStripMenuItem
+            // 
+            this.lDProgrammToolStripMenuItem.Name = "lDProgrammToolStripMenuItem";
+            this.lDProgrammToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.lDProgrammToolStripMenuItem.Text = "LD programm";
             // 
             // открытьToolStripMenuItem
             // 
@@ -332,7 +347,7 @@
             this.справкаToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1268, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -420,31 +435,30 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 526);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1268, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // проектToolStripMenuItem
+            // toolTip1
             // 
-            this.проектToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lDProgrammToolStripMenuItem});
-            this.проектToolStripMenuItem.Name = "проектToolStripMenuItem";
-            this.проектToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.проектToolStripMenuItem.Text = "Проект";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // lDProgrammToolStripMenuItem
+            // propertyGrid1
             // 
-            this.lDProgrammToolStripMenuItem.Name = "lDProgrammToolStripMenuItem";
-            this.lDProgrammToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lDProgrammToolStripMenuItem.Text = "LD programm";
+            this.propertyGrid1.Location = new System.Drawing.Point(12, 52);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.SelectedObject = this.lDProgrammToolStripMenuItem;
+            this.propertyGrid1.Size = new System.Drawing.Size(431, 453);
+            this.propertyGrid1.TabIndex = 9;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1268, 548);
+            this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStdLD);
@@ -506,6 +520,7 @@
         private System.Windows.Forms.ToolStripMenuItem проектToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lDProgrammToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }
 
