@@ -15,6 +15,7 @@ namespace LDEditor
         public UserControl1()
         {
             InitializeComponent();
+
         }
     }
 }
