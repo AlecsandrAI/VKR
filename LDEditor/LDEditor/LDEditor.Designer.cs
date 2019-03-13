@@ -1,4 +1,7 @@
-﻿namespace LDEditor
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace LDEditor
 {
     partial class Main
     {
@@ -523,4 +526,3 @@
         private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }
-

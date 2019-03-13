@@ -16,12 +16,6 @@ namespace LDEditor
         {
             InitializeComponent();
         }
-        public class FirstControl : Control
-        {
-            public FirstControl()
-            {
-            }
-        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -41,4 +35,6 @@ namespace LDEditor
 
         }
     }
+
+
 }
