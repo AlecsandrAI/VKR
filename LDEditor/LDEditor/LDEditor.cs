@@ -75,6 +75,70 @@ namespace LDEditor
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void propertyGrid1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contact1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void scrollableControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scrollableControl1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+                    }
+
+        private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 
 
