@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28306.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDEditor", "LDEditor\LDEditor.csproj", "{7209AC5B-283E-497A-BA9D-B4B0F96664ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLibrary", "..\..\..\WindowsFormsControlLibrary1\WindowsFormsControlLibrary1\ControlLibrary.csproj", "{88B2660E-5FEE-4417-B4AC-7509DAF99596}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFControlLibrary", "..\..\..\WFControlLibrary\WFControlLibrary\WFControlLibrary.csproj", "{225FAF12-67A6-443C-8B78-C7B7B9E05ED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7209AC5B-283E-497A-BA9D-B4B0F96664ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7209AC5B-283E-497A-BA9D-B4B0F96664ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7209AC5B-283E-497A-BA9D-B4B0F96664ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88B2660E-5FEE-4417-B4AC-7509DAF99596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88B2660E-5FEE-4417-B4AC-7509DAF99596}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88B2660E-5FEE-4417-B4AC-7509DAF99596}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88B2660E-5FEE-4417-B4AC-7509DAF99596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225FAF12-67A6-443C-8B78-C7B7B9E05ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225FAF12-67A6-443C-8B78-C7B7B9E05ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225FAF12-67A6-443C-8B78-C7B7B9E05ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225FAF12-67A6-443C-8B78-C7B7B9E05ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace LDEditor
@@ -33,18 +34,17 @@ namespace LDEditor
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("POU");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("LDprog");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Программа", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Устройство", new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("POU");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("LDprog");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Программа", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Устройство", new System.Windows.Forms.TreeNode[] {
+            treeNode11});
             this.menuStdLD = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lDProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,16 +68,16 @@ namespace LDEditor
             this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.модельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.стартToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.стопToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.паузаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.содержаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.индексToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.модельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.стартToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.стопToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.паузаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.открытьToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.сохранитьToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -99,11 +99,38 @@ namespace LDEditor
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.numVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVaribleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataVaribleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataVarible = new LDEditor.DataVarible();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.newNetwork20 = new WFControlLibrary.NewNetwork();
+            this.newNetwork19 = new WFControlLibrary.NewNetwork();
+            this.newNetwork18 = new WFControlLibrary.NewNetwork();
+            this.newNetwork17 = new WFControlLibrary.NewNetwork();
+            this.newNetwork16 = new WFControlLibrary.NewNetwork();
+            this.newNetwork15 = new WFControlLibrary.NewNetwork();
+            this.newNetwork14 = new WFControlLibrary.NewNetwork();
+            this.newNetwork13 = new WFControlLibrary.NewNetwork();
+            this.newNetwork12 = new WFControlLibrary.NewNetwork();
+            this.newNetwork11 = new WFControlLibrary.NewNetwork();
+            this.newNetwork10 = new WFControlLibrary.NewNetwork();
+            this.newNetwork9 = new WFControlLibrary.NewNetwork();
+            this.newNetwork8 = new WFControlLibrary.NewNetwork();
+            this.newNetwork6 = new WFControlLibrary.NewNetwork();
+            this.newNetwork5 = new WFControlLibrary.NewNetwork();
+            this.newNetwork4 = new WFControlLibrary.NewNetwork();
+            this.newNetwork3 = new WFControlLibrary.NewNetwork();
+            this.newNetwork2 = new WFControlLibrary.NewNetwork();
+            this.newNetwork1 = new WFControlLibrary.NewNetwork();
+            this.newNetwork7 = new WFControlLibrary.NewNetwork();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -114,7 +141,12 @@ namespace LDEditor
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataVaribleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStdLD.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -125,16 +157,24 @@ namespace LDEditor
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVarible)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStdLD
@@ -144,14 +184,13 @@ namespace LDEditor
             this.правкаToolStripMenuItem,
             this.видToolStripMenuItem,
             this.сервисToolStripMenuItem,
-            this.модельToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.модельToolStripMenuItem});
             this.menuStdLD.Location = new System.Drawing.Point(0, 0);
             this.menuStdLD.Name = "menuStdLD";
-            this.menuStdLD.Size = new System.Drawing.Size(1000, 24);
+            this.menuStdLD.Size = new System.Drawing.Size(1060, 24);
             this.menuStdLD.TabIndex = 5;
             this.menuStdLD.Text = "menuStrip1";
-            this.menuStdLD.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -183,17 +222,10 @@ namespace LDEditor
             // 
             // проектToolStripMenuItem
             // 
-            this.проектToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lDProgrammToolStripMenuItem});
             this.проектToolStripMenuItem.Name = "проектToolStripMenuItem";
             this.проектToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.проектToolStripMenuItem.Text = "Проект";
-            // 
-            // lDProgrammToolStripMenuItem
-            // 
-            this.lDProgrammToolStripMenuItem.Name = "lDProgrammToolStripMenuItem";
-            this.lDProgrammToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.lDProgrammToolStripMenuItem.Text = "LD programm";
+            this.проектToolStripMenuItem.Click += new System.EventHandler(this.проектToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
@@ -364,34 +396,6 @@ namespace LDEditor
             this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.параметрыToolStripMenuItem.Text = "&Параметры";
             // 
-            // модельToolStripMenuItem
-            // 
-            this.модельToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.стартToolStripMenuItem,
-            this.стопToolStripMenuItem,
-            this.паузаToolStripMenuItem});
-            this.модельToolStripMenuItem.Name = "модельToolStripMenuItem";
-            this.модельToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.модельToolStripMenuItem.Text = "Модель";
-            // 
-            // стартToolStripMenuItem
-            // 
-            this.стартToolStripMenuItem.Name = "стартToolStripMenuItem";
-            this.стартToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.стартToolStripMenuItem.Text = "Старт";
-            // 
-            // стопToolStripMenuItem
-            // 
-            this.стопToolStripMenuItem.Name = "стопToolStripMenuItem";
-            this.стопToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.стопToolStripMenuItem.Text = "Стоп";
-            // 
-            // паузаToolStripMenuItem
-            // 
-            this.паузаToolStripMenuItem.Name = "паузаToolStripMenuItem";
-            this.паузаToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.паузаToolStripMenuItem.Text = "Пауза";
-            // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -432,6 +436,34 @@ namespace LDEditor
             this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
             this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
+            // 
+            // модельToolStripMenuItem
+            // 
+            this.модельToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.стартToolStripMenuItem,
+            this.стопToolStripMenuItem,
+            this.паузаToolStripMenuItem});
+            this.модельToolStripMenuItem.Name = "модельToolStripMenuItem";
+            this.модельToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.модельToolStripMenuItem.Text = "Модель";
+            // 
+            // стартToolStripMenuItem
+            // 
+            this.стартToolStripMenuItem.Name = "стартToolStripMenuItem";
+            this.стартToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.стартToolStripMenuItem.Text = "Старт";
+            // 
+            // стопToolStripMenuItem
+            // 
+            this.стопToolStripMenuItem.Name = "стопToolStripMenuItem";
+            this.стопToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.стопToolStripMenuItem.Text = "Стоп";
+            // 
+            // паузаToolStripMenuItem
+            // 
+            this.паузаToolStripMenuItem.Name = "паузаToolStripMenuItem";
+            this.паузаToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.паузаToolStripMenuItem.Text = "Пауза";
             // 
             // создатьToolStripButton
             // 
@@ -530,7 +562,7 @@ namespace LDEditor
             this.справкаToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1000, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1060, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -545,7 +577,7 @@ namespace LDEditor
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 644);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1000, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1060, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
@@ -577,19 +609,20 @@ namespace LDEditor
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer1);
-            this.splitContainer3.Size = new System.Drawing.Size(1000, 565);
-            this.splitContainer3.SplitterDistance = 276;
+            this.splitContainer3.Size = new System.Drawing.Size(1060, 565);
+            this.splitContainer3.SplitterDistance = 292;
             this.splitContainer3.TabIndex = 9;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(276, 565);
+            this.tabControl1.Size = new System.Drawing.Size(292, 565);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -598,7 +631,7 @@ namespace LDEditor
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(268, 539);
+            this.tabPage1.Size = new System.Drawing.Size(284, 539);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Обозреватель решений";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -608,17 +641,17 @@ namespace LDEditor
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "POU";
-            treeNode1.Text = "POU";
-            treeNode2.Name = "LDprog";
-            treeNode2.Text = "LDprog";
-            treeNode3.Name = "Программа";
-            treeNode3.Text = "Программа";
-            treeNode4.Name = "Устройство";
-            treeNode4.Text = "Устройство";
+            treeNode9.Name = "POU";
+            treeNode9.Text = "POU";
+            treeNode10.Name = "LDprog";
+            treeNode10.Text = "LDprog";
+            treeNode11.Name = "Программа";
+            treeNode11.Text = "Программа";
+            treeNode12.Name = "Устройство";
+            treeNode12.Text = "Устройство";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            this.treeView1.Size = new System.Drawing.Size(262, 533);
+            treeNode12});
+            this.treeView1.Size = new System.Drawing.Size(278, 533);
             this.treeView1.TabIndex = 0;
             // 
             // tabPage2
@@ -627,7 +660,7 @@ namespace LDEditor
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(268, 539);
+            this.tabPage2.Size = new System.Drawing.Size(284, 539);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Свойства";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -637,47 +670,364 @@ namespace LDEditor
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.Location = new System.Drawing.Point(3, 3);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(262, 533);
+            this.propertyGrid1.Size = new System.Drawing.Size(278, 533);
             this.propertyGrid1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.listBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(284, 539);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "NetworkList";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(3, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(278, 533);
+            this.listBox1.TabIndex = 0;
             // 
             // splitContainer1
             // 
+            this.splitContainer1.AllowDrop = true;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(720, 565);
-            this.splitContainer1.SplitterDistance = 137;
-            this.splitContainer1.TabIndex = 9;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.AllowDrop = true;
+            this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(764, 565);
+            this.splitContainer1.SplitterDistance = 101;
+            this.splitContainer1.TabIndex = 0;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
+            this.numVarDataGridViewTextBoxColumn,
+            this.nameVarDataGridViewTextBoxColumn,
+            this.typeVarDataGridViewTextBoxColumn,
+            this.commentVarDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dataVaribleBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 137);
+            this.dataGridView1.Size = new System.Drawing.Size(764, 101);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column1
+            // numVarDataGridViewTextBoxColumn
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Имя переменной";
-            this.Column1.Name = "Column1";
+            this.numVarDataGridViewTextBoxColumn.DataPropertyName = "NumVar";
+            this.numVarDataGridViewTextBoxColumn.HeaderText = "NumVar";
+            this.numVarDataGridViewTextBoxColumn.Name = "numVarDataGridViewTextBoxColumn";
             // 
-            // Column2
+            // nameVarDataGridViewTextBoxColumn
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Тип переменной";
-            this.Column2.Name = "Column2";
+            this.nameVarDataGridViewTextBoxColumn.DataPropertyName = "NameVar";
+            this.nameVarDataGridViewTextBoxColumn.HeaderText = "NameVar";
+            this.nameVarDataGridViewTextBoxColumn.Name = "nameVarDataGridViewTextBoxColumn";
+            // 
+            // typeVarDataGridViewTextBoxColumn
+            // 
+            this.typeVarDataGridViewTextBoxColumn.DataPropertyName = "TypeVar";
+            this.typeVarDataGridViewTextBoxColumn.HeaderText = "TypeVar";
+            this.typeVarDataGridViewTextBoxColumn.Name = "typeVarDataGridViewTextBoxColumn";
+            // 
+            // commentVarDataGridViewTextBoxColumn
+            // 
+            this.commentVarDataGridViewTextBoxColumn.DataPropertyName = "CommentVar";
+            this.commentVarDataGridViewTextBoxColumn.HeaderText = "CommentVar";
+            this.commentVarDataGridViewTextBoxColumn.Name = "commentVarDataGridViewTextBoxColumn";
+            // 
+            // dataVaribleBindingSource1
+            // 
+            this.dataVaribleBindingSource1.DataMember = "DataVarible";
+            this.dataVaribleBindingSource1.DataSource = this.dataVaribleBindingSource;
+            // 
+            // dataVaribleBindingSource
+            // 
+            this.dataVaribleBindingSource.DataSource = this.dataVarible;
+            this.dataVaribleBindingSource.Position = 0;
+            // 
+            // dataVarible
+            // 
+            this.dataVarible.DataSetName = "DataVarible";
+            this.dataVarible.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork20, 0, 19);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork19, 0, 18);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork18, 0, 17);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork17, 0, 16);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork16, 0, 15);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork15, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork14, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork13, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork12, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork11, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork10, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork9, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork8, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork6, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.newNetwork7, 0, 6);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 20;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(764, 460);
+            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Layout += new System.Windows.Forms.LayoutEventHandler(this.tableLayoutPanel1_Layout);
+            // 
+            // newNetwork20
+            // 
+            this.newNetwork20.AllowDrop = true;
+            this.newNetwork20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork20.Location = new System.Drawing.Point(0, 950);
+            this.newNetwork20.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork20.Name = "newNetwork20";
+            this.newNetwork20.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork20.TabIndex = 19;
+            // 
+            // newNetwork19
+            // 
+            this.newNetwork19.AllowDrop = true;
+            this.newNetwork19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork19.Location = new System.Drawing.Point(0, 900);
+            this.newNetwork19.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork19.Name = "newNetwork19";
+            this.newNetwork19.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork19.TabIndex = 18;
+            // 
+            // newNetwork18
+            // 
+            this.newNetwork18.AllowDrop = true;
+            this.newNetwork18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork18.Location = new System.Drawing.Point(0, 850);
+            this.newNetwork18.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork18.Name = "newNetwork18";
+            this.newNetwork18.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork18.TabIndex = 17;
+            // 
+            // newNetwork17
+            // 
+            this.newNetwork17.AllowDrop = true;
+            this.newNetwork17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork17.Location = new System.Drawing.Point(0, 800);
+            this.newNetwork17.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork17.Name = "newNetwork17";
+            this.newNetwork17.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork17.TabIndex = 16;
+            // 
+            // newNetwork16
+            // 
+            this.newNetwork16.AllowDrop = true;
+            this.newNetwork16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork16.Location = new System.Drawing.Point(0, 750);
+            this.newNetwork16.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork16.Name = "newNetwork16";
+            this.newNetwork16.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork16.TabIndex = 15;
+            // 
+            // newNetwork15
+            // 
+            this.newNetwork15.AllowDrop = true;
+            this.newNetwork15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork15.Location = new System.Drawing.Point(0, 700);
+            this.newNetwork15.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork15.Name = "newNetwork15";
+            this.newNetwork15.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork15.TabIndex = 14;
+            // 
+            // newNetwork14
+            // 
+            this.newNetwork14.AllowDrop = true;
+            this.newNetwork14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork14.Location = new System.Drawing.Point(0, 650);
+            this.newNetwork14.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork14.Name = "newNetwork14";
+            this.newNetwork14.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork14.TabIndex = 13;
+            // 
+            // newNetwork13
+            // 
+            this.newNetwork13.AllowDrop = true;
+            this.newNetwork13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork13.Location = new System.Drawing.Point(0, 600);
+            this.newNetwork13.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork13.Name = "newNetwork13";
+            this.newNetwork13.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork13.TabIndex = 12;
+            // 
+            // newNetwork12
+            // 
+            this.newNetwork12.AllowDrop = true;
+            this.newNetwork12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork12.Location = new System.Drawing.Point(0, 550);
+            this.newNetwork12.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork12.Name = "newNetwork12";
+            this.newNetwork12.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork12.TabIndex = 11;
+            // 
+            // newNetwork11
+            // 
+            this.newNetwork11.AllowDrop = true;
+            this.newNetwork11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork11.Location = new System.Drawing.Point(0, 500);
+            this.newNetwork11.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork11.Name = "newNetwork11";
+            this.newNetwork11.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork11.TabIndex = 10;
+            // 
+            // newNetwork10
+            // 
+            this.newNetwork10.AllowDrop = true;
+            this.newNetwork10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork10.Location = new System.Drawing.Point(0, 450);
+            this.newNetwork10.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork10.Name = "newNetwork10";
+            this.newNetwork10.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork10.TabIndex = 9;
+            // 
+            // newNetwork9
+            // 
+            this.newNetwork9.AllowDrop = true;
+            this.newNetwork9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork9.Location = new System.Drawing.Point(0, 400);
+            this.newNetwork9.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork9.Name = "newNetwork9";
+            this.newNetwork9.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork9.TabIndex = 8;
+            // 
+            // newNetwork8
+            // 
+            this.newNetwork8.AllowDrop = true;
+            this.newNetwork8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork8.Location = new System.Drawing.Point(0, 350);
+            this.newNetwork8.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork8.Name = "newNetwork8";
+            this.newNetwork8.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork8.TabIndex = 7;
+            // 
+            // newNetwork6
+            // 
+            this.newNetwork6.AllowDrop = true;
+            this.newNetwork6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork6.Location = new System.Drawing.Point(0, 250);
+            this.newNetwork6.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork6.Name = "newNetwork6";
+            this.newNetwork6.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork6.TabIndex = 5;
+            // 
+            // newNetwork5
+            // 
+            this.newNetwork5.AllowDrop = true;
+            this.newNetwork5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork5.Location = new System.Drawing.Point(0, 200);
+            this.newNetwork5.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork5.Name = "newNetwork5";
+            this.newNetwork5.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork5.TabIndex = 4;
+            // 
+            // newNetwork4
+            // 
+            this.newNetwork4.AllowDrop = true;
+            this.newNetwork4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork4.Location = new System.Drawing.Point(0, 150);
+            this.newNetwork4.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork4.Name = "newNetwork4";
+            this.newNetwork4.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork4.TabIndex = 3;
+            // 
+            // newNetwork3
+            // 
+            this.newNetwork3.AllowDrop = true;
+            this.newNetwork3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork3.Location = new System.Drawing.Point(0, 100);
+            this.newNetwork3.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork3.Name = "newNetwork3";
+            this.newNetwork3.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork3.TabIndex = 2;
+            // 
+            // newNetwork2
+            // 
+            this.newNetwork2.AllowDrop = true;
+            this.newNetwork2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork2.Location = new System.Drawing.Point(0, 50);
+            this.newNetwork2.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork2.Name = "newNetwork2";
+            this.newNetwork2.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork2.TabIndex = 1;
+            // 
+            // newNetwork1
+            // 
+            this.newNetwork1.AllowDrop = true;
+            this.newNetwork1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork1.Location = new System.Drawing.Point(0, 0);
+            this.newNetwork1.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork1.Name = "newNetwork1";
+            this.newNetwork1.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork1.TabIndex = 0;
+            this.newNetwork1.Load += new System.EventHandler(this.newNetwork1_Load);
+            this.newNetwork1.Click += new System.EventHandler(this.newNetwork1_Click);
+            // 
+            // newNetwork7
+            // 
+            this.newNetwork7.AllowDrop = true;
+            this.newNetwork7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newNetwork7.Location = new System.Drawing.Point(0, 300);
+            this.newNetwork7.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork7.Name = "newNetwork7";
+            this.newNetwork7.Size = new System.Drawing.Size(764, 50);
+            this.newNetwork7.TabIndex = 6;
             // 
             // splitContainer4
             // 
@@ -693,7 +1043,7 @@ namespace LDEditor
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer4.Size = new System.Drawing.Size(1000, 595);
+            this.splitContainer4.Size = new System.Drawing.Size(1060, 595);
             this.splitContainer4.SplitterDistance = 26;
             this.splitContainer4.TabIndex = 10;
             // 
@@ -709,10 +1059,12 @@ namespace LDEditor
             this.toolStripButton5,
             this.toolStripButton6,
             this.toolStripButton7,
-            this.toolStripButton8});
+            this.toolStripButton8,
+            this.toolStripSeparator8,
+            this.toolStripButton9});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1000, 26);
+            this.toolStrip2.Size = new System.Drawing.Size(1060, 26);
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -724,6 +1076,7 @@ namespace LDEditor
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -733,6 +1086,7 @@ namespace LDEditor
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton2.Text = "InversContact";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -742,6 +1096,7 @@ namespace LDEditor
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton3.Text = "Rele";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -788,16 +1143,40 @@ namespace LDEditor
             this.toolStripButton8.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton8.Text = "FN";
             // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 26);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(34, 23);
+            this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // dataVaribleBindingSource2
+            // 
+            this.dataVaribleBindingSource2.DataSource = this.dataVarible;
+            this.dataVaribleBindingSource2.Position = 0;
+            // 
+            // mainBindingSource
+            // 
+            this.mainBindingSource.DataSource = typeof(LDEditor.Main);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 666);
+            this.ClientSize = new System.Drawing.Size(1060, 666);
             this.Controls.Add(this.splitContainer4);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -818,11 +1197,16 @@ namespace LDEditor
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVarible)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
@@ -830,10 +1214,15 @@ namespace LDEditor
             this.splitContainer4.ResumeLayout(false);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStdLD;
@@ -867,7 +1256,6 @@ namespace LDEditor
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem опрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проектToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lDProgrammToolStripMenuItem;
         private ToolStripButton создатьToolStripButton;
         private ToolStripButton открытьToolStripButton;
         private ToolStripButton сохранитьToolStripButton;
@@ -881,17 +1269,10 @@ namespace LDEditor
         private ToolStrip toolStrip1;
         private ToolTip toolTip1;
         private StatusStrip statusStrip1;
-        private SplitContainer splitContainer3;
-        private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private SplitContainer splitContainer1;
-        private DataGridView dataGridView1;
         private TreeView treeView1;
         private BindingSource bindingSource1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private SplitContainer splitContainer4;
         private ToolStrip toolStrip2;
         private ToolStripMenuItem видToolStripMenuItem;
         private ToolStripMenuItem масштабToolStripMenuItem;
@@ -901,7 +1282,6 @@ namespace LDEditor
         private ToolStripMenuItem паузаToolStripMenuItem;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
-        private PropertyGrid propertyGrid1;
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripButton2;
         private ToolStripButton toolStripButton3;
@@ -911,5 +1291,45 @@ namespace LDEditor
         private ToolStripButton toolStripButton7;
         private ToolStripButton toolStripButton8;
         private ContextMenuStrip contextMenuStrip1;
+        private ToolStripSeparator toolStripSeparator8;
+        private ToolStripButton toolStripButton9;
+        public SplitContainer splitContainer3;
+        public SplitContainer splitContainer4;
+        public DataGridView dataGridView1;
+        public SplitContainer splitContainer1;
+        private WFControlLibrary.NewNetwork newNetwork7;
+        public WFControlLibrary.NewNetwork newNetwork6;
+        public WFControlLibrary.NewNetwork newNetwork5;
+        public WFControlLibrary.NewNetwork newNetwork4;
+        public WFControlLibrary.NewNetwork newNetwork3;
+        public WFControlLibrary.NewNetwork newNetwork2;
+        public WFControlLibrary.NewNetwork newNetwork1;
+        public WFControlLibrary.NewNetwork newNetwork20;
+        public WFControlLibrary.NewNetwork newNetwork19;
+        public WFControlLibrary.NewNetwork newNetwork18;
+        public WFControlLibrary.NewNetwork newNetwork17;
+        public WFControlLibrary.NewNetwork newNetwork16;
+        public WFControlLibrary.NewNetwork newNetwork15;
+        public WFControlLibrary.NewNetwork newNetwork14;
+        public WFControlLibrary.NewNetwork newNetwork13;
+        public WFControlLibrary.NewNetwork newNetwork12;
+        public WFControlLibrary.NewNetwork newNetwork11;
+        public WFControlLibrary.NewNetwork newNetwork10;
+        public WFControlLibrary.NewNetwork newNetwork9;
+        public WFControlLibrary.NewNetwork newNetwork8;
+        public TableLayoutPanel tableLayoutPanel1;
+        private BindingSource dataVaribleBindingSource;
+        private DataVarible dataVarible;
+        private DataGridViewTextBoxColumn numVarDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameVarDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn typeVarDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn commentVarDataGridViewTextBoxColumn;
+        private BindingSource dataVaribleBindingSource1;
+        private TabPage tabPage3;
+        private ListBox listBox1;
+        public TabControl tabControl1;
+        private BindingSource dataVaribleBindingSource2;
+        private BindingSource mainBindingSource;
+        public PropertyGrid propertyGrid1;
     }
 }
