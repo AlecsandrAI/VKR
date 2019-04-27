@@ -34,13 +34,13 @@ namespace LDEditor
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("POU");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("LDprog");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Программа", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Устройство", new System.Windows.Forms.TreeNode[] {
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("POU");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("LDprog");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Программа", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Устройство", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
             this.menuStdLD = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -641,16 +641,16 @@ namespace LDEditor
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode9.Name = "POU";
-            treeNode9.Text = "POU";
-            treeNode10.Name = "LDprog";
-            treeNode10.Text = "LDprog";
-            treeNode11.Name = "Программа";
-            treeNode11.Text = "Программа";
-            treeNode12.Name = "Устройство";
-            treeNode12.Text = "Устройство";
+            treeNode1.Name = "POU";
+            treeNode1.Text = "POU";
+            treeNode2.Name = "LDprog";
+            treeNode2.Text = "LDprog";
+            treeNode3.Name = "Программа";
+            treeNode3.Text = "Программа";
+            treeNode4.Name = "Устройство";
+            treeNode4.Text = "Устройство";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12});
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(278, 533);
             this.treeView1.TabIndex = 0;
             // 
