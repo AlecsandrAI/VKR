@@ -68,14 +68,6 @@
     <Compile Include="AutoVarible.Designer.cs">
       <DependentUpon>AutoVarible.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataVarible.cs">
-      <DependentUpon>DataVarible.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataVarible.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataVarible.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +76,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AutoVarible.resx">
       <DependentUpon>AutoVarible.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,20 +98,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="DataVarible.xsc">
-      <DependentUpon>DataVarible.xsd</DependentUpon>
-    </None>
-    <None Include="DataVarible.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataVarible.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataVarible.xss">
-      <DependentUpon>DataVarible.xsd</DependentUpon>
-    </None>
-    <None Include="Properties\DataSources\Main.datasource" />
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -174,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NewNetwork.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

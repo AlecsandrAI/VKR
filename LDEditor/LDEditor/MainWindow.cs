@@ -15,71 +15,21 @@ namespace LDEditor
 
     public partial class Main : Form
     {
-        
+        List<NewNetwork> NetList = new List<NewNetwork>();
 
         public Main()
         {
             InitializeComponent();
-            
+
         }
-       
 
-
-
+        
         public void Form1_Load(object sender, EventArgs e)
         {
-            List<NewNetwork> NetworkList = new List<NewNetwork>();
-            NetworkList.Add(newNetwork1);
-            NetworkList.Add(newNetwork2);
-            NetworkList.Add(newNetwork3);
-            NetworkList.Add(newNetwork4);
-            NetworkList.Add(newNetwork5);
-            NetworkList.Add(newNetwork6);
-            NetworkList.Add(newNetwork7);
-            NetworkList.Add(newNetwork8);
-            NetworkList.Add(newNetwork9);
-            NetworkList.Add(newNetwork10);
-            NetworkList.Add(newNetwork11);
-            NetworkList.Add(newNetwork12);
-            NetworkList.Add(newNetwork13);
-            NetworkList.Add(newNetwork14);
-            NetworkList.Add(newNetwork15);
-            NetworkList.Add(newNetwork16);
-            NetworkList.Add(newNetwork17);
-            NetworkList.Add(newNetwork18);
-            NetworkList.Add(newNetwork19);
-            NetworkList.Add(newNetwork20);
 
-            
+            NetList.Add(newNetwork1);
 
-
-
-            newNetwork1.labelNumNetwork.Text = "1";
-            newNetwork2.labelNumNetwork.Text = "2";
-            newNetwork3.labelNumNetwork.Text = "3";
-            newNetwork4.labelNumNetwork.Text = "4";
-            newNetwork5.labelNumNetwork.Text = "5";
-            newNetwork6.labelNumNetwork.Text = "6";
-            newNetwork7.labelNumNetwork.Text = "7";
-            newNetwork8.labelNumNetwork.Text = "8";
-            newNetwork9.labelNumNetwork.Text = "9";
-            newNetwork10.labelNumNetwork.Text = "10";
-            newNetwork11.labelNumNetwork.Text = "11";
-            newNetwork12.labelNumNetwork.Text = "12";
-            newNetwork13.labelNumNetwork.Text = "13";
-            newNetwork14.labelNumNetwork.Text = "14";
-            newNetwork15.labelNumNetwork.Text = "15";
-            newNetwork16.labelNumNetwork.Text = "16";
-            newNetwork17.labelNumNetwork.Text = "17";
-            newNetwork18.labelNumNetwork.Text = "18";
-            newNetwork19.labelNumNetwork.Text = "19";
-            newNetwork20.labelNumNetwork.Text = "20";
-
-            foreach (NewNetwork net in NetworkList)
-            {
-                listBox1.Items.Add(net.Name);
-            }
-
+            newNetwork1.labelNumNetwork.Text = tLPEditor.Controls.Count.ToString();
 
 
         }
@@ -119,7 +69,7 @@ namespace LDEditor
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            //this.contact1_MouseClick.Click += new System.EventHandler(ClearLabels);
+
         }
 
         private void contact1_MouseClick(object sender, MouseEventArgs e)
@@ -204,7 +154,15 @@ namespace LDEditor
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             InvContact invcontact = new InvContact();
-            newNetwork1.NetElementPanel.Controls.Add(invcontact, 1, 0);
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+                    netw.NetElementPanel.Controls.Add(invcontact, 1, 0);
+
+                    break;
+                }
+            }
         }
 
 
@@ -220,26 +178,84 @@ namespace LDEditor
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
-            AutoVarible autoVarible = new AutoVarible();
-            autoVarible.ShowDialog();
+            NewNetwork newNetwork = new NewNetwork();
+            int i = tLPEditor.Controls.Count + 1;
+            newNetwork.Height = 50;
+            newNetwork.AutoSize = false;
+            newNetwork.labelNumNetwork.Text = i.ToString();
+            tLPEditor.Controls.Add(newNetwork);
+
+
+            foreach (NewNetwork net in NetList)
+            {
+                NetList.Add(net);
+                break;
+            }
+
+            this.Refresh();
         }
-        
+
         private void tableLayoutPanel1_Layout(object sender, LayoutEventArgs e)
         {
-            
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Contact contact = new Contact();
-            newNetwork1.NetElementPanel.Controls.Add(contact, 1, 0);
+
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+                    netw.NetElementPanel.Controls.Add(contact, 1, 0);
+
+                    break;
+                }
+            }
+            this.Refresh();
+            //if (ActiveControl is TableLayoutPanel)
+            //{
+
+            //    TableLayoutPanel NetElementPanel = ActiveControl as TableLayoutPanel;
+            //    ActiveControl.Controls.Add(contact, 1, 0);
+            //}
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            
+
             Coil coil = new Coil();
-            newNetwork1.NetElementPanel.Controls.Add(coil, newNetwork1.NetElementPanel.ColumnCount-1, 0);
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+                    netw.NetElementPanel.Controls.Add(coil, netw.NetElementPanel.ColumnCount - 1, 0);
+                    pGElem.SelectedObject = netw;
+                }
+                else
+                {
+                    foreach (Coil co in netw.NetElementPanel.Controls)
+                    {
+                        if (co.ContainsFocus)
+                        {
+
+                            netw.NetElementPanel.Controls.Add(coil, netw.NetElementPanel.ColumnCount - 1, netw.NetElementPanel.GetRow(co) + 1);
+                            netw.NetElementPanel.RowCount++;
+                            netw.Height = +50;
+                            pGElem.SelectedObject = co;
+                            break;
+                        }
+                    }
+
+                }
+
+                break;
+            }
+
+            this.Refresh();
+
         }
 
         private void newNetwork1_Load(object sender, EventArgs e)
@@ -249,8 +265,45 @@ namespace LDEditor
 
         private void newNetwork1_Click(object sender, EventArgs e)
         {
-            
-          
+
+
+        }
+
+        private void Main_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+
+        }
+
+        private void propertyGrid1_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            ParalContact paralcontact = new ParalContact();
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+
+                    netw.NetElementPanel.RowCount++;
+                    netw.Height = netw.Height + 50;
+                    netw.NetElementPanel.Controls.Add(paralcontact, 1, 1);
+                }
+            }
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            foreach (Control netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+
+                }
+            }
         }
     }
 }
