@@ -23,7 +23,7 @@ namespace LDEditor
 
         }
 
-        
+
         public void Form1_Load(object sender, EventArgs e)
         {
 
@@ -182,6 +182,7 @@ namespace LDEditor
             int i = tLPEditor.Controls.Count + 1;
             newNetwork.Height = 50;
             newNetwork.AutoSize = false;
+            newNetwork.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
             newNetwork.labelNumNetwork.Text = i.ToString();
             tLPEditor.Controls.Add(newNetwork);
 
@@ -202,18 +203,24 @@ namespace LDEditor
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Contact contact = new Contact();
+            Point pos = new Point(125, 25);
+            Contact contact = new Contact(pos);
+            Point pos1 = new Point(0, 0);
+            int d = 30;
 
+            LineHoriz lnhoriz = new LineHoriz(pos1, d);
             foreach (NewNetwork netw in tLPEditor.Controls)
             {
                 if (netw.ContainsFocus)
                 {
                     netw.NetElementPanel.Controls.Add(contact, 1, 0);
+                    netw.NetElementPanel.Controls.Add(lnhoriz, 1, 0);
+                    netw.NetElementPanel.ColumnCount++;
 
                     break;
                 }
             }
-            this.Refresh();
+
             //if (ActiveControl is TableLayoutPanel)
             //{
 
@@ -297,16 +304,34 @@ namespace LDEditor
 
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
-            foreach (Control netw in tLPEditor.Controls)
+            foreach (NewNetwork netw in tLPEditor.Controls)
             {
                 if (netw.ContainsFocus)
                 {
+                    tLPEditor.Controls.Remove(netw);
+                    tLPEditor.Dispose();
 
                 }
+
             }
+
+        }
+        private void ToolStripButton12_Click(object sender, EventArgs e)
+        {
+            Test frm = new Test();
+            frm.Show();
+        }
+
+        private void toolStripButton13_Click(object sender, EventArgs e)
+        {
+            AutoVarible av = new AutoVarible();
+            av.Show();
         }
     }
+   
 }
+       
+    
 
 
 

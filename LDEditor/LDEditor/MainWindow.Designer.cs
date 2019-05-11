@@ -89,6 +89,7 @@ namespace LDEditor
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.справкаToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -127,6 +128,7 @@ namespace LDEditor
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataVaribleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.menuStdLD.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -201,7 +203,7 @@ namespace LDEditor
             // проектToolStripMenuItem
             // 
             this.проектToolStripMenuItem.Name = "проектToolStripMenuItem";
-            this.проектToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.проектToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.проектToolStripMenuItem.Text = "Проект";
             this.проектToolStripMenuItem.Click += new System.EventHandler(this.проектToolStripMenuItem_Click);
             // 
@@ -389,30 +391,30 @@ namespace LDEditor
             // содержаниеToolStripMenuItem
             // 
             this.содержаниеToolStripMenuItem.Name = "содержаниеToolStripMenuItem";
-            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.содержаниеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.содержаниеToolStripMenuItem.Text = "&Содержание";
             // 
             // индексToolStripMenuItem
             // 
             this.индексToolStripMenuItem.Name = "индексToolStripMenuItem";
-            this.индексToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.индексToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.индексToolStripMenuItem.Text = "&Индекс";
             // 
             // поискToolStripMenuItem
             // 
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.поискToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.поискToolStripMenuItem.Text = "&Поиск";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(155, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // опрограммеToolStripMenuItem
             // 
             this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
-            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
             // 
             // модельToolStripMenuItem
@@ -537,12 +539,24 @@ namespace LDEditor
             this.копироватьToolStripButton,
             this.вставкаToolStripButton,
             this.toolStripSeparator7,
-            this.справкаToolStripButton});
+            this.справкаToolStripButton,
+            this.toolStripButton12});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1060, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "toolStripButton12";
+            this.toolStripButton12.ToolTipText = "Открыть тестовую форму";
+            this.toolStripButton12.Click += new System.EventHandler(this.ToolStripButton12_Click);
             // 
             // toolTip1
             // 
@@ -783,7 +797,8 @@ namespace LDEditor
             this.toolStripButton8,
             this.toolStripSeparator8,
             this.toolStripButton9,
-            this.toolStripButton11});
+            this.toolStripButton11,
+            this.toolStripButton13});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1060, 26);
@@ -889,6 +904,7 @@ namespace LDEditor
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.ToolTipText = "Добавить сеть";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // toolStripButton11
@@ -899,6 +915,7 @@ namespace LDEditor
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.Size = new System.Drawing.Size(34, 23);
             this.toolStripButton11.Text = "toolStripButton11";
+            this.toolStripButton11.ToolTipText = "Удалить";
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
             // contextMenuStrip1
@@ -909,6 +926,16 @@ namespace LDEditor
             // mainBindingSource
             // 
             this.mainBindingSource.DataSource = typeof(LDEditor.Main);
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(34, 23);
+            this.toolStripButton13.Text = "toolStripButton13";
+            this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
             // 
             // Main
             // 
@@ -943,7 +970,6 @@ namespace LDEditor
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource)).EndInit();
             this.tLPEditor.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -1049,5 +1075,7 @@ namespace LDEditor
         public WFControlLibrary.NewNetwork newNetwork1;
         private ToolStripButton toolStripButton10;
         private ToolStripButton toolStripButton11;
+        private ToolStripButton toolStripButton12;
+        private ToolStripButton toolStripButton13;
     }
 }

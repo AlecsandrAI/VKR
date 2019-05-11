@@ -32,5 +32,21 @@ namespace LDEditor
 
             this.Refresh();
         }
+
+        private void lineHoriz1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LineHoriz l = new LineHoriz();
+            netwo1.Controls.Add(l);
+        }
+
+        private void netwo1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
