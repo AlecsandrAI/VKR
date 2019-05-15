@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFControlLibrary;
+using System.Xml.Serialization;
 
 
 namespace LDEditor
@@ -21,7 +22,12 @@ namespace LDEditor
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
 
-            
+          //  var xmlFormatter = new XmlSerializer();
+
+
+
+
+
             //List<NewNetwork> NetworksList = new List<NewNetwork>();
             //IEnumerator GetEnumerator()
             //{

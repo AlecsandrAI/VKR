@@ -151,7 +151,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Line.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\WFControlLibrary\WFControlLibrary\WFControlLibrary.csproj">
       <Project>{225faf12-67a6-443c-8b78-c7b7b9e05ed5}</Project>

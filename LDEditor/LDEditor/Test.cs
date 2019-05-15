@@ -40,13 +40,18 @@ namespace LDEditor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            LineHoriz l = new LineHoriz();
-            netwo1.Controls.Add(l);
+           
+            //netwo1.Controls.Add(l);
         }
 
         private void netwo1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

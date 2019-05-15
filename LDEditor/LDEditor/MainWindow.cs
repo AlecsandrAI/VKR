@@ -203,9 +203,8 @@ namespace LDEditor
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Point pos = new Point(125, 25);
-            Contact contact = new Contact(pos);
-            Point pos1 = new Point(0, 0);
+            Contact contact = new Contact();
+            Point pos1 = new Point(15, 0);
             int d = 30;
 
             LineHoriz lnhoriz = new LineHoriz(pos1, d);
@@ -213,8 +212,9 @@ namespace LDEditor
             {
                 if (netw.ContainsFocus)
                 {
-                    netw.NetElementPanel.Controls.Add(contact, 1, 0);
                     netw.NetElementPanel.Controls.Add(lnhoriz, 1, 0);
+                    netw.NetElementPanel.Controls.Add(contact, 1, 0);
+                    
                     netw.NetElementPanel.ColumnCount++;
 
                     break;
@@ -327,6 +327,7 @@ namespace LDEditor
             AutoVarible av = new AutoVarible();
             av.Show();
         }
+
     }
    
 }
