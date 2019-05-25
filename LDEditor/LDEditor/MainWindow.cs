@@ -328,6 +328,10 @@ namespace LDEditor
             av.Show();
         }
 
+        private void tLPEditor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
    
 }

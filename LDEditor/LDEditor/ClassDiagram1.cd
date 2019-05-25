@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="LDEditor.AutoVarible" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LDEditor.Main">
-    <Position X="4" Y="0.5" Width="4.5" />
+    <Position X="8.5" Y="2" Width="1.5" />
     <Members>
       <Field Name="toolStripButton1" Hidden="true" />
       <Field Name="toolStripButton10" Hidden="true" />
@@ -30,7 +30,6 @@
       <Field Name="toolStripSeparator6" Hidden="true" />
       <Field Name="toolStripSeparator7" Hidden="true" />
       <Field Name="toolStripSeparator8" Hidden="true" />
-      <Field Name="toolStripStatusLabel1" Hidden="true" />
       <Field Name="toolStripStatusLabel2" Hidden="true" />
       <Field Name="видToolStripMenuItem" Hidden="true" />
       <Field Name="вставкаToolStripButton" Hidden="true" />
@@ -45,8 +44,6 @@
       <Field Name="опрограммеToolStripMenuItem" Hidden="true" />
       <Field Name="открытьToolStripButton" Hidden="true" />
       <Field Name="открытьToolStripMenuItem" Hidden="true" />
-      <Field Name="отменадействияToolStripMenuItem" Hidden="true" />
-      <Field Name="отменадействияToolStripMenuItem1" Hidden="true" />
       <Field Name="правкаToolStripMenuItem" Hidden="true" />
       <Field Name="проектToolStripMenuItem" Hidden="true" />
       <Field Name="создатьToolStripButton" Hidden="true" />
@@ -59,32 +56,25 @@
       <Field Name="файлToolStripMenuItem" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>BMCKIuWFUCYlAAUAoPXJgN9zEBmtqQgCKZ4gHjA0bIk=</HashCode>
+      <HashCode>BMCKQuUFECYlAAUAoPXJgV9zEBGlqUgCCZ5gHjQ0bAk=</HashCode>
       <FileName>MainWindow.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LDEditor.Program" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+  <Class Name="LDEditor.Program">
+    <Position X="4.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LDEditor.Test" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="LDEditor.Properties.Resources">
+    <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACACAACAEI4AAAAAFAIgQAAAAA=</HashCode>
-      <FileName>Test.cs</FileName>
+      <HashCode>AAgAAAAAAAAAAAAACAABEAAAAQAAAAAAAAAAAAABAIE=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="LDEditor.Properties.Resources" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAACAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LDEditor.Properties.Settings" Collapsed="true">
-    <Position X="9" Y="2" Width="1.5" />
+  <Class Name="LDEditor.Properties.Settings">
+    <Position X="1.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>

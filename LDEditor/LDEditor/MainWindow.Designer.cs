@@ -45,8 +45,6 @@ namespace LDEditor
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отменадействияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.вырезатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,42 +68,35 @@ namespace LDEditor
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pGElem = new System.Windows.Forms.PropertyGrid();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentVarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVaribleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataVaribleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvVarTable = new System.Windows.Forms.DataGridView();
+            this.NumVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommentVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tLPEditor = new System.Windows.Forms.TableLayoutPanel();
-            this.newNetwork1 = new WFControlLibrary.NewNetwork();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tSPanelEdit = new System.Windows.Forms.ToolStrip();
+            this.tbtnAddContact = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddParalContact = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddInvContact = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddCoil = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddInvCoil = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddSetCoil = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddResetCoil = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddFPContact = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddFNContact = new System.Windows.Forms.ToolStripButton();
             this.btnAddLine = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.tbtnAddNetwork = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataVaribleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStdLD.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -119,18 +110,13 @@ namespace LDEditor
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVarTable)).BeginInit();
             this.tLPEditor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
+            this.tSPanelEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStdLD
@@ -221,8 +207,6 @@ namespace LDEditor
             // правкаToolStripMenuItem
             // 
             this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отменадействияToolStripMenuItem,
-            this.отменадействияToolStripMenuItem1,
             this.toolStripSeparator3,
             this.вырезатьToolStripMenuItem,
             this.копироватьToolStripMenuItem,
@@ -233,24 +217,10 @@ namespace LDEditor
             this.правкаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.правкаToolStripMenuItem.Text = "&Правка";
             // 
-            // отменадействияToolStripMenuItem
-            // 
-            this.отменадействияToolStripMenuItem.Name = "отменадействияToolStripMenuItem";
-            this.отменадействияToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.отменадействияToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.отменадействияToolStripMenuItem.Text = "&Отмена действия";
-            // 
-            // отменадействияToolStripMenuItem1
-            // 
-            this.отменадействияToolStripMenuItem1.Name = "отменадействияToolStripMenuItem1";
-            this.отменадействияToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.отменадействияToolStripMenuItem1.Size = new System.Drawing.Size(209, 22);
-            this.отменадействияToolStripMenuItem1.Text = "&Отмена действия";
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(178, 6);
             // 
             // вырезатьToolStripMenuItem
             // 
@@ -258,7 +228,7 @@ namespace LDEditor
             this.вырезатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.вырезатьToolStripMenuItem.Name = "вырезатьToolStripMenuItem";
             this.вырезатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.вырезатьToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.вырезатьToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.вырезатьToolStripMenuItem.Text = "Вырезат&ь";
             // 
             // копироватьToolStripMenuItem
@@ -267,7 +237,7 @@ namespace LDEditor
             this.копироватьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
             this.копироватьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.копироватьToolStripMenuItem.Text = "&Копировать";
             // 
             // вставкаToolStripMenuItem
@@ -276,18 +246,18 @@ namespace LDEditor
             this.вставкаToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.вставкаToolStripMenuItem.Name = "вставкаToolStripMenuItem";
             this.вставкаToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.вставкаToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.вставкаToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.вставкаToolStripMenuItem.Text = "Вст&авка";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(206, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(178, 6);
             // 
             // выделитьвсеToolStripMenuItem
             // 
             this.выделитьвсеToolStripMenuItem.Name = "выделитьвсеToolStripMenuItem";
-            this.выделитьвсеToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.выделитьвсеToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.выделитьвсеToolStripMenuItem.Text = "Выделить &все";
             // 
             // видToolStripMenuItem
@@ -428,7 +398,6 @@ namespace LDEditor
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 644);
             this.statusStrip1.Name = "statusStrip1";
@@ -436,12 +405,6 @@ namespace LDEditor
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Enabled = false;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel2
             // 
@@ -508,7 +471,7 @@ namespace LDEditor
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel1.Controls.Add(this.dgvVarTable);
             // 
             // splitContainer1.Panel2
             // 
@@ -519,52 +482,42 @@ namespace LDEditor
             this.splitContainer1.SplitterDistance = 101;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvVarTable
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numVarDataGridViewTextBoxColumn,
-            this.nameVarDataGridViewTextBoxColumn,
-            this.typeVarDataGridViewTextBoxColumn,
-            this.commentVarDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dataVaribleBindingSource1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(764, 101);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvVarTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVarTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVarTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NumVar,
+            this.NameVar,
+            this.TypeVar,
+            this.CommentVar});
+            this.dgvVarTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvVarTable.Location = new System.Drawing.Point(0, 0);
+            this.dgvVarTable.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvVarTable.Name = "dgvVarTable";
+            this.dgvVarTable.Size = new System.Drawing.Size(764, 101);
+            this.dgvVarTable.TabIndex = 0;
             // 
-            // numVarDataGridViewTextBoxColumn
+            // NumVar
             // 
-            this.numVarDataGridViewTextBoxColumn.DataPropertyName = "NumVar";
-            this.numVarDataGridViewTextBoxColumn.HeaderText = "NumVar";
-            this.numVarDataGridViewTextBoxColumn.Name = "numVarDataGridViewTextBoxColumn";
+            this.NumVar.HeaderText = "Number ";
+            this.NumVar.Name = "NumVar";
             // 
-            // nameVarDataGridViewTextBoxColumn
+            // NameVar
             // 
-            this.nameVarDataGridViewTextBoxColumn.DataPropertyName = "NameVar";
-            this.nameVarDataGridViewTextBoxColumn.HeaderText = "NameVar";
-            this.nameVarDataGridViewTextBoxColumn.Name = "nameVarDataGridViewTextBoxColumn";
+            this.NameVar.HeaderText = "Name";
+            this.NameVar.Name = "NameVar";
             // 
-            // typeVarDataGridViewTextBoxColumn
+            // TypeVar
             // 
-            this.typeVarDataGridViewTextBoxColumn.DataPropertyName = "TypeVar";
-            this.typeVarDataGridViewTextBoxColumn.HeaderText = "TypeVar";
-            this.typeVarDataGridViewTextBoxColumn.Name = "typeVarDataGridViewTextBoxColumn";
+            this.TypeVar.HeaderText = "Type";
+            this.TypeVar.Name = "TypeVar";
             // 
-            // commentVarDataGridViewTextBoxColumn
+            // CommentVar
             // 
-            this.commentVarDataGridViewTextBoxColumn.DataPropertyName = "CommentVar";
-            this.commentVarDataGridViewTextBoxColumn.HeaderText = "CommentVar";
-            this.commentVarDataGridViewTextBoxColumn.Name = "commentVarDataGridViewTextBoxColumn";
-            // 
-            // dataVaribleBindingSource1
-            // 
-            this.dataVaribleBindingSource1.DataMember = "DataVarible";
-            this.dataVaribleBindingSource1.DataSource = this.dataVaribleBindingSource;
+            this.CommentVar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CommentVar.HeaderText = "Comment";
+            this.CommentVar.Name = "CommentVar";
             // 
             // tLPEditor
             // 
@@ -572,7 +525,6 @@ namespace LDEditor
             this.tLPEditor.AutoSize = true;
             this.tLPEditor.ColumnCount = 1;
             this.tLPEditor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tLPEditor.Controls.Add(this.newNetwork1, 0, 0);
             this.tLPEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tLPEditor.Location = new System.Drawing.Point(0, 0);
             this.tLPEditor.Margin = new System.Windows.Forms.Padding(0);
@@ -582,23 +534,8 @@ namespace LDEditor
             this.tLPEditor.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tLPEditor.Size = new System.Drawing.Size(764, 460);
             this.tLPEditor.TabIndex = 0;
+            this.tLPEditor.Paint += new System.Windows.Forms.PaintEventHandler(this.tLPEditor_Paint);
             this.tLPEditor.Layout += new System.Windows.Forms.LayoutEventHandler(this.tableLayoutPanel1_Layout);
-            // 
-            // newNetwork1
-            // 
-            this.newNetwork1.AllowDrop = true;
-            this.newNetwork1.AutoScroll = true;
-            this.newNetwork1.AutoSize = true;
-            this.newNetwork1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.newNetwork1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newNetwork1.Location = new System.Drawing.Point(4, 4);
-            this.newNetwork1.Margin = new System.Windows.Forms.Padding(0);
-            this.newNetwork1.MinimumSize = new System.Drawing.Size(600, 50);
-            this.newNetwork1.Name = "newNetwork1";
-            this.newNetwork1.Size = new System.Drawing.Size(756, 50);
-            this.newNetwork1.TabIndex = 0;
-            this.newNetwork1.Load += new System.EventHandler(this.newNetwork1_Load);
-            this.newNetwork1.Click += new System.EventHandler(this.newNetwork1_Click);
             // 
             // splitContainer4
             // 
@@ -609,7 +546,7 @@ namespace LDEditor
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.toolStrip2);
+            this.splitContainer4.Panel1.Controls.Add(this.tSPanelEdit);
             // 
             // splitContainer4.Panel2
             // 
@@ -618,123 +555,134 @@ namespace LDEditor
             this.splitContainer4.SplitterDistance = 26;
             this.splitContainer4.TabIndex = 10;
             // 
-            // toolStrip2
+            // tSPanelEdit
             // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton10,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton8,
+            this.tSPanelEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tSPanelEdit.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.tSPanelEdit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbtnAddContact,
+            this.tbtnAddParalContact,
+            this.tbtnAddInvContact,
+            this.tbtnAddCoil,
+            this.tbtnAddInvCoil,
+            this.tbtnAddSetCoil,
+            this.tbtnAddResetCoil,
+            this.tbtnAddFPContact,
+            this.tbtnAddFNContact,
             this.btnAddLine,
             this.toolStripSeparator8,
-            this.toolStripButton9,
+            this.tbtnAddNetwork,
             this.toolStripButton11,
             this.toolStripButton13});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1060, 26);
-            this.toolStrip2.TabIndex = 0;
-            this.toolStrip2.Text = "toolStrip2";
+            this.tSPanelEdit.Location = new System.Drawing.Point(0, 0);
+            this.tSPanelEdit.Name = "tSPanelEdit";
+            this.tSPanelEdit.Size = new System.Drawing.Size(1060, 26);
+            this.tSPanelEdit.TabIndex = 0;
+            this.tSPanelEdit.Text = "toolStrip2";
             // 
-            // toolStripButton1
+            // tbtnAddContact
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.tbtnAddContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddContact.Image = ((System.Drawing.Image)(resources.GetObject("tbtnAddContact.Image")));
+            this.tbtnAddContact.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddContact.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddContact.Name = "tbtnAddContact";
+            this.tbtnAddContact.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddContact.ToolTipText = "Добавить контакт";
+            this.tbtnAddContact.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton10
+            // tbtnAddParalContact
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = global::LDEditor.Properties.Resources.Contact;
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton10.Text = "toolStripButton10";
-            this.toolStripButton10.ToolTipText = "Параллельный контакт";
-            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            this.tbtnAddParalContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddParalContact.Image = global::LDEditor.Properties.Resources.ParalContact;
+            this.tbtnAddParalContact.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddParalContact.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddParalContact.Name = "tbtnAddParalContact";
+            this.tbtnAddParalContact.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddParalContact.Text = "Вставить параллельный контакт";
+            this.tbtnAddParalContact.ToolTipText = "Параллельный контакт";
+            this.tbtnAddParalContact.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
-            // toolStripButton2
+            // tbtnAddInvContact
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton2.Text = "InversContact";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.tbtnAddInvContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddInvContact.Image = global::LDEditor.Properties.Resources.InvContact;
+            this.tbtnAddInvContact.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddInvContact.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddInvContact.Name = "tbtnAddInvContact";
+            this.tbtnAddInvContact.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddInvContact.Text = "Вставить обратный контакт";
+            this.tbtnAddInvContact.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // toolStripButton3
+            // tbtnAddCoil
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton3.Text = "Rele";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.tbtnAddCoil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddCoil.Image = global::LDEditor.Properties.Resources.Coil;
+            this.tbtnAddCoil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddCoil.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddCoil.Name = "tbtnAddCoil";
+            this.tbtnAddCoil.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddCoil.Text = "Вставить обмотку";
+            this.tbtnAddCoil.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // toolStripButton4
+            // tbtnAddInvCoil
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton4.Text = "InversRele";
+            this.tbtnAddInvCoil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddInvCoil.Image = global::LDEditor.Properties.Resources.InvCoil;
+            this.tbtnAddInvCoil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddInvCoil.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddInvCoil.Name = "tbtnAddInvCoil";
+            this.tbtnAddInvCoil.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddInvCoil.Text = "Вставить обратную обмотку";
             // 
-            // toolStripButton5
+            // tbtnAddSetCoil
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton5.Text = "SetRele";
+            this.tbtnAddSetCoil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddSetCoil.Image = global::LDEditor.Properties.Resources.SetCoil;
+            this.tbtnAddSetCoil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddSetCoil.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddSetCoil.Name = "tbtnAddSetCoil";
+            this.tbtnAddSetCoil.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddSetCoil.Text = "Вставить Set обмотку";
             // 
-            // toolStripButton6
+            // tbtnAddResetCoil
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton6.Text = "ResetRele";
+            this.tbtnAddResetCoil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddResetCoil.Image = global::LDEditor.Properties.Resources.ResetCoil;
+            this.tbtnAddResetCoil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddResetCoil.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddResetCoil.Name = "tbtnAddResetCoil";
+            this.tbtnAddResetCoil.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddResetCoil.Text = "Вставить Reset обмотку";
             // 
-            // toolStripButton7
+            // tbtnAddFPContact
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton7.Text = "FP";
+            this.tbtnAddFPContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddFPContact.Image = global::LDEditor.Properties.Resources.FP_contact;
+            this.tbtnAddFPContact.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddFPContact.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddFPContact.Name = "tbtnAddFPContact";
+            this.tbtnAddFPContact.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddFPContact.Text = "Вставить FP контакт";
             // 
-            // toolStripButton8
+            // tbtnAddFNContact
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton8.Text = "FN";
+            this.tbtnAddFNContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddFNContact.Image = global::LDEditor.Properties.Resources.FN_contact;
+            this.tbtnAddFNContact.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddFNContact.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddFNContact.Name = "tbtnAddFNContact";
+            this.tbtnAddFNContact.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddFNContact.Text = "Вставить FN контакт";
             // 
             // btnAddLine
             // 
             this.btnAddLine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAddLine.Image = global::LDEditor.Properties.Resources.Line;
             this.btnAddLine.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddLine.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddLine.Name = "btnAddLine";
-            this.btnAddLine.Size = new System.Drawing.Size(23, 23);
+            this.btnAddLine.Size = new System.Drawing.Size(34, 26);
             this.btnAddLine.Text = "toolStripButton14";
             // 
             // toolStripSeparator8
@@ -742,16 +690,17 @@ namespace LDEditor
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 26);
             // 
-            // toolStripButton9
+            // tbtnAddNetwork
             // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(34, 23);
-            this.toolStripButton9.Text = "toolStripButton9";
-            this.toolStripButton9.ToolTipText = "Добавить сеть";
-            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            this.tbtnAddNetwork.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnAddNetwork.Image = global::LDEditor.Properties.Resources.AddNetwork;
+            this.tbtnAddNetwork.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnAddNetwork.Margin = new System.Windows.Forms.Padding(0);
+            this.tbtnAddNetwork.Name = "tbtnAddNetwork";
+            this.tbtnAddNetwork.Size = new System.Drawing.Size(34, 26);
+            this.tbtnAddNetwork.Text = "toolStripButton9";
+            this.tbtnAddNetwork.ToolTipText = "Добавить сеть";
+            this.tbtnAddNetwork.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // toolStripButton11
             // 
@@ -778,10 +727,6 @@ namespace LDEditor
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // mainBindingSource
-            // 
-            this.mainBindingSource.DataSource = typeof(LDEditor.Main);
             // 
             // Main
             // 
@@ -813,9 +758,7 @@ namespace LDEditor
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVarTable)).EndInit();
             this.tLPEditor.ResumeLayout(false);
             this.tLPEditor.PerformLayout();
             this.splitContainer4.Panel1.ResumeLayout(false);
@@ -823,11 +766,8 @@ namespace LDEditor
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVaribleBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).EndInit();
+            this.tSPanelEdit.ResumeLayout(false);
+            this.tSPanelEdit.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -846,8 +786,6 @@ namespace LDEditor
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отменадействияToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem вырезатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem;
@@ -870,43 +808,37 @@ namespace LDEditor
         private ToolTip toolTip1;
         private StatusStrip statusStrip1;
         private TabPage tabPage2;
-        private BindingSource bindingSource1;
-        private ToolStrip toolStrip2;
+        private ToolStrip tSPanelEdit;
         private ToolStripMenuItem видToolStripMenuItem;
         private ToolStripMenuItem масштабToolStripMenuItem;
-        private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
-        private ToolStripButton toolStripButton6;
-        private ToolStripButton toolStripButton7;
-        private ToolStripButton toolStripButton8;
+        private ToolStripButton tbtnAddContact;
+        private ToolStripButton tbtnAddInvContact;
+        private ToolStripButton tbtnAddCoil;
+        private ToolStripButton tbtnAddInvCoil;
+        private ToolStripButton tbtnAddSetCoil;
+        private ToolStripButton tbtnAddResetCoil;
+        private ToolStripButton tbtnAddFPContact;
+        private ToolStripButton tbtnAddFNContact;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripSeparator toolStripSeparator8;
-        private ToolStripButton toolStripButton9;
+        private ToolStripButton tbtnAddNetwork;
         public SplitContainer splitContainer3;
         public SplitContainer splitContainer4;
-        public DataGridView dataGridView1;
+        public DataGridView dgvVarTable;
         public SplitContainer splitContainer1;
-        private BindingSource dataVaribleBindingSource1;
         public TableLayoutPanel tLPEditor;
-        private BindingSource dataVaribleBindingSource;
-        private DataGridViewTextBoxColumn numVarDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nameVarDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn typeVarDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn commentVarDataGridViewTextBoxColumn;
         public TabControl tabControl1;
-        private BindingSource dataVaribleBindingSource2;
-        private BindingSource mainBindingSource;
         public PropertyGrid pGElem;
         public WFControlLibrary.NewNetwork newNetwork1;
-        private ToolStripButton toolStripButton10;
+        private ToolStripButton tbtnAddParalContact;
         private ToolStripButton toolStripButton11;
         private ToolStripButton toolStripButton12;
         private ToolStripButton toolStripButton13;
         private ToolStripButton btnAddLine;
+        private DataGridViewTextBoxColumn NumVar;
+        private DataGridViewTextBoxColumn NameVar;
+        private DataGridViewTextBoxColumn TypeVar;
+        private DataGridViewTextBoxColumn CommentVar;
     }
 }

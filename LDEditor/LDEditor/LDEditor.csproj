@@ -102,6 +102,7 @@
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,10 +162,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NewNetwork.ico" />
+    <Resource Include="Resources\NewNetwork.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Contact.png" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.10.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.10.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AddNetwork.bmp" />
+    <None Include="Resources\Line.bmp" />
+    <None Include="Resources\ParalContact.bmp" />
+    <None Include="Resources\SetCoil.bmp" />
+    <None Include="Resources\ResetCoil.bmp" />
+    <None Include="Resources\InvCoil.bmp" />
+    <None Include="Resources\Coil.bmp" />
+    <None Include="Resources\InvContact.bmp" />
+    <None Include="Resources\Contact.bmp" />
+    <None Include="Resources\FP contact.bmp" />
+    <None Include="Resources\FN contact.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
