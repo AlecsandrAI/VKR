@@ -20,12 +20,12 @@ namespace LDEditor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NewNetwork newNetwork = new NewNetwork();
-            int i = panel1.Controls.Count + 1;
-            newNetwork.Height = 50;
-            newNetwork.AutoSize = false;
-            newNetwork.labelNumNetwork.Text = i.ToString();
-            panel1.Controls.Add(newNetwork);
+            //NewNetwork newNetwork = new NewNetwork();
+            //int i = panel1.Controls.Count + 1;
+            //newNetwork.Height = 50;
+            //newNetwork.AutoSize = false;
+            //newNetwork.labelNumNetwork.Text = i.ToString();
+            //panel1.Controls.Add(newNetwork);
 
 
            

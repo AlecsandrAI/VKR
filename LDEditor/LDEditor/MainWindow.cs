@@ -377,6 +377,14 @@ namespace LDEditor
             filestream.Close();
         }
 
+
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditForm frmNew = new EditForm();
+            frmNew.MdiParent = this;
+            frmNew.Show();
+
+        }
     }
    
 }
