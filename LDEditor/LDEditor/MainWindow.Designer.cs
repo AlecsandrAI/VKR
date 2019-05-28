@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace LDEditor
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -33,7 +33,7 @@ namespace LDEditor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStdLD = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +80,7 @@ namespace LDEditor
             this.TypeVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CommentVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tLPEditor = new System.Windows.Forms.TableLayoutPanel();
+            this.newNetwork1 = new WFControlLibrary.NewNetwork();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.tSPanelEdit = new System.Windows.Forms.ToolStrip();
             this.tbtnAddContact = new System.Windows.Forms.ToolStripButton();
@@ -154,7 +155,7 @@ namespace LDEditor
             this.создатьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
             this.создатьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.создатьToolStripMenuItem.Text = "&Создать";
             // 
             // проектToolStripMenuItem
@@ -162,7 +163,6 @@ namespace LDEditor
             this.проектToolStripMenuItem.Name = "проектToolStripMenuItem";
             this.проектToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.проектToolStripMenuItem.Text = "Проект";
-            this.проектToolStripMenuItem.Click += new System.EventHandler(this.проектToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
@@ -525,6 +525,7 @@ namespace LDEditor
             this.tLPEditor.AutoSize = true;
             this.tLPEditor.ColumnCount = 1;
             this.tLPEditor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tLPEditor.Controls.Add(this.newNetwork1, 0, 0);
             this.tLPEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tLPEditor.Location = new System.Drawing.Point(0, 0);
             this.tLPEditor.Margin = new System.Windows.Forms.Padding(0);
@@ -535,7 +536,22 @@ namespace LDEditor
             this.tLPEditor.Size = new System.Drawing.Size(764, 460);
             this.tLPEditor.TabIndex = 0;
             this.tLPEditor.Paint += new System.Windows.Forms.PaintEventHandler(this.tLPEditor_Paint);
-            this.tLPEditor.Layout += new System.Windows.Forms.LayoutEventHandler(this.tableLayoutPanel1_Layout);
+            // 
+            // newNetwork1
+            // 
+            this.newNetwork1.AllowDrop = true;
+            this.newNetwork1.AutoScroll = true;
+            this.newNetwork1.AutoSize = true;
+            this.newNetwork1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newNetwork1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.newNetwork1.Location = new System.Drawing.Point(4, 4);
+            this.newNetwork1.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork1.MinimumSize = new System.Drawing.Size(600, 50);
+            this.newNetwork1.Name = "newNetwork1";
+            this.newNetwork1.Size = new System.Drawing.Size(756, 50);
+            this.newNetwork1.TabIndex = 0;
+            this.newNetwork1.Load += new System.EventHandler(this.newNetwork1_Load);
+            this.newNetwork1.Click += new System.EventHandler(this.newNetwork1_Click);
             // 
             // splitContainer4
             // 
@@ -678,12 +694,12 @@ namespace LDEditor
             // btnAddLine
             // 
             this.btnAddLine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAddLine.Image = global::LDEditor.Properties.Resources.Line;
+            this.btnAddLine.Image = ((System.Drawing.Image)(resources.GetObject("btnAddLine.Image")));
             this.btnAddLine.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAddLine.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddLine.Name = "btnAddLine";
             this.btnAddLine.Size = new System.Drawing.Size(34, 26);
-            this.btnAddLine.Text = "toolStripButton14";
+            this.btnAddLine.Text = "Вставить линию";
             // 
             // toolStripSeparator8
             // 
@@ -698,7 +714,7 @@ namespace LDEditor
             this.tbtnAddNetwork.Margin = new System.Windows.Forms.Padding(0);
             this.tbtnAddNetwork.Name = "tbtnAddNetwork";
             this.tbtnAddNetwork.Size = new System.Drawing.Size(34, 26);
-            this.tbtnAddNetwork.Text = "toolStripButton9";
+            this.tbtnAddNetwork.Text = "Вставить новую сеть";
             this.tbtnAddNetwork.ToolTipText = "Добавить сеть";
             this.tbtnAddNetwork.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
@@ -728,7 +744,7 @@ namespace LDEditor
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Main
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -737,8 +753,9 @@ namespace LDEditor
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStdLD);
-            this.Name = "Main";
+            this.Name = "frmMain";
             this.Text = "LDEditor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Main_Click);
             this.menuStdLD.ResumeLayout(false);

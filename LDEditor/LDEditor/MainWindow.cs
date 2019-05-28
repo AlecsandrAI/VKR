@@ -9,15 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFControlLibrary;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace LDEditor
 {
 
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
+        public class FormSize
+        {
+            public int height;
+            public int width;
+        }
+
         List<NewNetwork> NetList = new List<NewNetwork>();
 
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
 
@@ -28,10 +36,31 @@ namespace LDEditor
         {
 
             NetList.Add(newNetwork1);
+             newNetwork1.labelNumNetwork.Text = tLPEditor.Controls.Count.ToString();
 
-            newNetwork1.labelNumNetwork.Text = tLPEditor.Controls.Count.ToString();
+            //Создаем экземпляр frmSizeSetup класса FormSize:
+            FormSize frmSizeSetup = new FormSize();
 
+            //Cоздаем экземпляр xmlser класса XmlSerializer
+            XmlSerializer xmlser = new XmlSerializer(typeof(FormSize));
 
+            //Создаем переменную filename, которой присваиваем
+            //название файла applicationSettings.xml в текущей директории
+            string filename = System.Environment.CurrentDirectory + "\\applicationSettings.xml";
+            
+            //Создаем поток filestream для чтения XML-файла
+            FileStream filestream = new FileStream(filename, FileMode.Open);
+
+            //Экземпляру frmSizeSetup передаем данные,
+            //полученные в процессе десериализации
+            frmSizeSetup = (FormSize)xmlser.Deserialize(filestream);
+
+            //Устанавливаем текущие высоту и ширину формы
+            this.Height = frmSizeSetup.height;
+            this.Width = frmSizeSetup.width;
+
+            //Закрываем поток
+            filestream.Close();
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -166,15 +195,8 @@ namespace LDEditor
         }
 
 
-        private void splitContainer1_Panel2_Paint_2(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
-        private void проектToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
@@ -196,10 +218,6 @@ namespace LDEditor
             this.Refresh();
         }
 
-        private void tableLayoutPanel1_Layout(object sender, LayoutEventArgs e)
-        {
-
-        }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -332,6 +350,33 @@ namespace LDEditor
         {
 
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Создаем экземпляр frmSize класса FormSize:
+            FormSize frmSize = new FormSize();
+
+            // Присваиваем текущие значения высоты и ширины формы переменным height и width
+            frmSize.height = this.Height;
+            frmSize.width = this.Width;
+
+            //Cоздаем экземпляр xmlser класса XmlSerializer
+            XmlSerializer xmlser = new XmlSerializer(typeof(FormSize));
+
+            //Создаем переменную filename, которой присваиваем
+            //название файла applicationSettings.xml в текущей директории
+            string filename = System.Environment.CurrentDirectory + "\\applicationSettings.xml";
+
+            //Создаем поток filestream для создания XML-файла
+            FileStream filestream = new FileStream(filename, FileMode.Create);
+
+            //Создаем сериализацию для экземпляра frmSize
+            xmlser.Serialize(filestream, frmSize);
+
+            //Закрываем поток
+            filestream.Close();
+        }
+
     }
    
 }

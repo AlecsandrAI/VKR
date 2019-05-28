@@ -20,7 +20,7 @@ namespace LDEditor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new frmMain());
 
           //  var xmlFormatter = new XmlSerializer();
 
