@@ -8,12 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFControlLibrary;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace LDEditor
 {
-    public partial class Test : Form
+    [Serializable]
+    public partial class frmEditor : Form
     {
-        public Test()
+
+        public string DocName = ""; 
+
+        public frmEditor()
         {
             InitializeComponent();
         }
@@ -52,6 +58,20 @@ namespace LDEditor
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //XmlSerializer xmlser = new XmlSerializer(typeof(frmEditor.ControlCollection));
+            ////Создаем переменную filename, которой присваиваем
+            ////название файла Editor.xml в текущей директории
+            //string filename = System.Environment.CurrentDirectory + "\\Editor.xml";
+            ////Создаем поток filestream для создания XML-файла
+            //FileStream filestream = new FileStream(filename, FileMode.Create);
+            ////Создаем сериализацию для экземпляра frmSize
+            //xmlser.Serialize(filestream, sender);
+            ////Закрываем поток
+            //filestream.Close();
         }
     }
 }

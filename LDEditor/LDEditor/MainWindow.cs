@@ -336,7 +336,7 @@ namespace LDEditor
         }
         private void ToolStripButton12_Click(object sender, EventArgs e)
         {
-            Test frm = new Test();
+            frmEditor frm = new frmEditor();
             frm.Show();
         }
 
