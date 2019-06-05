@@ -17,7 +17,7 @@ namespace LDEditor
 
     public partial class frmMain : Form
     {
-        string thisNameVar;
+       
         public class FormSize
         {
             public int height;
@@ -402,10 +402,6 @@ namespace LDEditor
             }
         }
 
-        private void toolStripButton3_Click_1(object sender, EventArgs e)
-        {
-            
-        }
 
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -434,6 +430,16 @@ namespace LDEditor
         private void tsmiPOU_Click(object sender, EventArgs e)
         {
             sc3.Panel1Collapsed = tsmiPOU.Checked;
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tsbAddLineVert_Click(object sender, EventArgs e)
+        {
+
         }
     }
    

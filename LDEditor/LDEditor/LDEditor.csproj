@@ -91,10 +91,10 @@
     <Compile Include="AutoVarible.Designer.cs">
       <DependentUpon>AutoVarible.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainLDWindow.cs">
+    <Compile Include="Test\MainLDWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainLDWindow.Designer.cs">
+    <Compile Include="Test\MainLDWindow.Designer.cs">
       <DependentUpon>MainLDWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
@@ -105,16 +105,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Editor.cs">
+    <Compile Include="Test\Editor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editor.Designer.cs">
+    <Compile Include="Test\Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AutoVarible.resx">
       <DependentUpon>AutoVarible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainLDWindow.resx">
+    <EmbeddedResource Include="Test\MainLDWindow.resx">
       <DependentUpon>MainLDWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
@@ -130,7 +130,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Editor.resx">
+    <EmbeddedResource Include="Test\Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -156,11 +156,14 @@
     <Resource Include="Resources\NewNetwork.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.10.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
-    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.10.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\AddNetwork.bmp" />
+    <Content Include="Resources\Jump.bmp" />
+    <Content Include="Resources\Return.bmp" />
+    <None Include="Resources\deleteVertLine.bmp" />
+    <None Include="Resources\deleteHorzLine.bmp" />
+    <None Include="Resources\Inv.bmp" />
+    <None Include="Resources\LineVert.bmp" />
+    <None Include="Resources\delete.bmp" />
     <None Include="Resources\Line.bmp" />
     <None Include="Resources\ParalContact.bmp" />
     <None Include="Resources\SetCoil.bmp" />

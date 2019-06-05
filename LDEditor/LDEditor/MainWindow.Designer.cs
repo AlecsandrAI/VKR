@@ -46,11 +46,14 @@ namespace LDEditor
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvVarTable = new System.Windows.Forms.DataGridView();
+            this.NameVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommentVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tLPEditor = new System.Windows.Forms.TableLayoutPanel();
+            this.newNetwork1 = new WFControlLibrary.NewNetwork();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.tSPanelEdit = new System.Windows.Forms.ToolStrip();
             this.tbtnAddContact = new System.Windows.Forms.ToolStripButton();
-            this.tbtnAddParalContact = new System.Windows.Forms.ToolStripButton();
             this.tbtnAddInvContact = new System.Windows.Forms.ToolStripButton();
             this.tbtnAddCoil = new System.Windows.Forms.ToolStripButton();
             this.tbtnAddInvCoil = new System.Windows.Forms.ToolStripButton();
@@ -58,13 +61,16 @@ namespace LDEditor
             this.tbtnAddResetCoil = new System.Windows.Forms.ToolStripButton();
             this.tbtnAddFPContact = new System.Windows.Forms.ToolStripButton();
             this.tbtnAddFNContact = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbAddLineVert = new System.Windows.Forms.ToolStripButton();
             this.btnAddLine = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tbtnAddNetwork = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.tsiDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbDeleteLineHoriz = new System.Windows.Forms.ToolStripButton();
+            this.tsnDeleteLineVert = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbJump = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.создатьToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -95,14 +101,10 @@ namespace LDEditor
             this.выделитьвсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.масштабToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPOU = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStdLD = new System.Windows.Forms.MenuStrip();
-            this.NameVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommentVar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newNetwork1 = new WFControlLibrary.NewNetwork();
-            this.tsmiPOU = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sc3)).BeginInit();
             this.sc3.Panel1.SuspendLayout();
@@ -240,6 +242,22 @@ namespace LDEditor
             this.dgvVarTable.TabIndex = 0;
             this.dgvVarTable.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvVarTable_RowsAdded);
             // 
+            // NameVar
+            // 
+            this.NameVar.HeaderText = "Name";
+            this.NameVar.Name = "NameVar";
+            // 
+            // TypeVar
+            // 
+            this.TypeVar.HeaderText = "Type";
+            this.TypeVar.Name = "TypeVar";
+            // 
+            // CommentVar
+            // 
+            this.CommentVar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CommentVar.HeaderText = "Comment";
+            this.CommentVar.Name = "CommentVar";
+            // 
             // tLPEditor
             // 
             this.tLPEditor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -253,12 +271,29 @@ namespace LDEditor
             this.tLPEditor.Margin = new System.Windows.Forms.Padding(0);
             this.tLPEditor.Name = "tLPEditor";
             this.tLPEditor.Padding = new System.Windows.Forms.Padding(4);
-            this.tLPEditor.RowCount = 1;
-            this.tLPEditor.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tLPEditor.Size = new System.Drawing.Size(1096, 449);
+            this.tLPEditor.RowCount = 2;
+            this.tLPEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tLPEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tLPEditor.Size = new System.Drawing.Size(1096, 313);
             this.tLPEditor.TabIndex = 0;
             this.tLPEditor.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.tLPEditor_ControlAdded);
             this.tLPEditor.Paint += new System.Windows.Forms.PaintEventHandler(this.tLPEditor_Paint);
+            // 
+            // newNetwork1
+            // 
+            this.newNetwork1.AllowDrop = true;
+            this.newNetwork1.AutoScroll = true;
+            this.newNetwork1.AutoSize = true;
+            this.newNetwork1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newNetwork1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.newNetwork1.Location = new System.Drawing.Point(4, 4);
+            this.newNetwork1.Margin = new System.Windows.Forms.Padding(0);
+            this.newNetwork1.MinimumSize = new System.Drawing.Size(600, 50);
+            this.newNetwork1.Name = "newNetwork1";
+            this.newNetwork1.Size = new System.Drawing.Size(1088, 50);
+            this.newNetwork1.TabIndex = 0;
+            this.newNetwork1.Load += new System.EventHandler(this.newNetwork1_Load);
+            this.newNetwork1.Click += new System.EventHandler(this.newNetwork1_Click);
             // 
             // splitContainer4
             // 
@@ -284,7 +319,6 @@ namespace LDEditor
             this.tSPanelEdit.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.tSPanelEdit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbtnAddContact,
-            this.tbtnAddParalContact,
             this.tbtnAddInvContact,
             this.tbtnAddCoil,
             this.tbtnAddInvCoil,
@@ -292,13 +326,16 @@ namespace LDEditor
             this.tbtnAddResetCoil,
             this.tbtnAddFPContact,
             this.tbtnAddFNContact,
-            this.toolStripButton3,
+            this.tsbAddLineVert,
             this.btnAddLine,
             this.toolStripButton2,
             this.toolStripSeparator8,
             this.tbtnAddNetwork,
-            this.toolStripButton11,
-            this.toolStripButton13,
+            this.tsiDelete,
+            this.tsbDeleteLineHoriz,
+            this.tsnDeleteLineVert,
+            this.toolStripSeparator2,
+            this.tsbJump,
             this.toolStripButton1});
             this.tSPanelEdit.Location = new System.Drawing.Point(0, 0);
             this.tSPanelEdit.Name = "tSPanelEdit";
@@ -316,18 +353,6 @@ namespace LDEditor
             this.tbtnAddContact.Size = new System.Drawing.Size(34, 25);
             this.tbtnAddContact.ToolTipText = "Добавить контакт";
             this.tbtnAddContact.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // tbtnAddParalContact
-            // 
-            this.tbtnAddParalContact.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnAddParalContact.Image = global::LDEditor.Properties.Resources.ParalContact;
-            this.tbtnAddParalContact.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnAddParalContact.Margin = new System.Windows.Forms.Padding(0);
-            this.tbtnAddParalContact.Name = "tbtnAddParalContact";
-            this.tbtnAddParalContact.Size = new System.Drawing.Size(34, 25);
-            this.tbtnAddParalContact.Text = "Вставить параллельный контакт";
-            this.tbtnAddParalContact.ToolTipText = "Параллельный контакт";
-            this.tbtnAddParalContact.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
             // tbtnAddInvContact
             // 
@@ -401,15 +426,16 @@ namespace LDEditor
             this.tbtnAddFNContact.Size = new System.Drawing.Size(34, 25);
             this.tbtnAddFNContact.Text = "Вставить FN контакт";
             // 
-            // toolStripButton3
+            // tsbAddLineVert
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(34, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click_1);
+            this.tsbAddLineVert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAddLineVert.Image = global::LDEditor.Properties.Resources.LineVert;
+            this.tsbAddLineVert.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAddLineVert.Margin = new System.Windows.Forms.Padding(0);
+            this.tsbAddLineVert.Name = "tsbAddLineVert";
+            this.tsbAddLineVert.Size = new System.Drawing.Size(34, 25);
+            this.tsbAddLineVert.Text = "toolStripButton3";
+            this.tsbAddLineVert.Click += new System.EventHandler(this.tsbAddLineVert_Click);
             // 
             // btnAddLine
             // 
@@ -424,17 +450,19 @@ namespace LDEditor
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::LDEditor.Properties.Resources.Inv;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 25);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // toolStripSeparator8
             // 
+            this.toolStripSeparator8.AutoSize = false;
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(15, 25);
             // 
             // tbtnAddNetwork
             // 
@@ -448,36 +476,62 @@ namespace LDEditor
             this.tbtnAddNetwork.ToolTipText = "Добавить сеть";
             this.tbtnAddNetwork.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
-            // toolStripButton11
+            // tsiDelete
             // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(34, 22);
-            this.toolStripButton11.Text = "toolStripButton11";
-            this.toolStripButton11.ToolTipText = "Удалить";
-            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
+            this.tsiDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsiDelete.Image = global::LDEditor.Properties.Resources.delete;
+            this.tsiDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsiDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.tsiDelete.Name = "tsiDelete";
+            this.tsiDelete.Size = new System.Drawing.Size(34, 25);
+            this.tsiDelete.ToolTipText = "Удалить";
+            this.tsiDelete.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
-            // toolStripButton13
+            // tsbDeleteLineHoriz
             // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(34, 22);
-            this.toolStripButton13.Text = "toolStripButton13";
-            this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
+            this.tsbDeleteLineHoriz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDeleteLineHoriz.Image = global::LDEditor.Properties.Resources.deleteHorzLine;
+            this.tsbDeleteLineHoriz.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDeleteLineHoriz.Name = "tsbDeleteLineHoriz";
+            this.tsbDeleteLineHoriz.Size = new System.Drawing.Size(34, 22);
+            this.tsbDeleteLineHoriz.Text = "toolStripButton13";
+            this.tsbDeleteLineHoriz.ToolTipText = "Удалить горизонтальную линию";
+            this.tsbDeleteLineHoriz.Click += new System.EventHandler(this.toolStripButton13_Click);
+            // 
+            // tsnDeleteLineVert
+            // 
+            this.tsnDeleteLineVert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsnDeleteLineVert.Image = global::LDEditor.Properties.Resources.deleteVertLine;
+            this.tsnDeleteLineVert.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsnDeleteLineVert.Name = "tsnDeleteLineVert";
+            this.tsnDeleteLineVert.Size = new System.Drawing.Size(34, 22);
+            this.tsnDeleteLineVert.ToolTipText = "Удалить вертикальную линию";
+            this.tsnDeleteLineVert.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.AutoSize = false;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(15, 25);
+            // 
+            // tsbJump
+            // 
+            this.tsbJump.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbJump.Image = global::LDEditor.Properties.Resources.Jump;
+            this.tsbJump.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbJump.Name = "tsbJump";
+            this.tsbJump.Size = new System.Drawing.Size(34, 22);
+            this.tsbJump.Text = "toolStripButton1";
+            this.tsbJump.ToolTipText = "Вставить переход";
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Image = global::LDEditor.Properties.Resources.Return;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(34, 22);
             this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // contextMenuStrip1
             // 
@@ -586,6 +640,7 @@ namespace LDEditor
             this.toolStrip1.Size = new System.Drawing.Size(1060, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -719,8 +774,18 @@ namespace LDEditor
             // масштабToolStripMenuItem
             // 
             this.масштабToolStripMenuItem.Name = "масштабToolStripMenuItem";
-            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.масштабToolStripMenuItem.Text = "&Масштаб";
+            // 
+            // tsmiPOU
+            // 
+            this.tsmiPOU.Checked = true;
+            this.tsmiPOU.CheckOnClick = true;
+            this.tsmiPOU.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsmiPOU.Name = "tsmiPOU";
+            this.tsmiPOU.Size = new System.Drawing.Size(142, 22);
+            this.tsmiPOU.Text = "&Панель POU";
+            this.tsmiPOU.Click += new System.EventHandler(this.tsmiPOU_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -748,48 +813,6 @@ namespace LDEditor
             this.menuStdLD.Size = new System.Drawing.Size(1060, 24);
             this.menuStdLD.TabIndex = 5;
             this.menuStdLD.Text = "menuStrip1";
-            // 
-            // NameVar
-            // 
-            this.NameVar.HeaderText = "Name";
-            this.NameVar.Name = "NameVar";
-            // 
-            // TypeVar
-            // 
-            this.TypeVar.HeaderText = "Type";
-            this.TypeVar.Name = "TypeVar";
-            // 
-            // CommentVar
-            // 
-            this.CommentVar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CommentVar.HeaderText = "Comment";
-            this.CommentVar.Name = "CommentVar";
-            // 
-            // newNetwork1
-            // 
-            this.newNetwork1.AllowDrop = true;
-            this.newNetwork1.AutoScroll = true;
-            this.newNetwork1.AutoSize = true;
-            this.newNetwork1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.newNetwork1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newNetwork1.Location = new System.Drawing.Point(4, 4);
-            this.newNetwork1.Margin = new System.Windows.Forms.Padding(0);
-            this.newNetwork1.MinimumSize = new System.Drawing.Size(600, 50);
-            this.newNetwork1.Name = "newNetwork1";
-            this.newNetwork1.Size = new System.Drawing.Size(1088, 50);
-            this.newNetwork1.TabIndex = 0;
-            this.newNetwork1.Load += new System.EventHandler(this.newNetwork1_Load);
-            this.newNetwork1.Click += new System.EventHandler(this.newNetwork1_Click);
-            // 
-            // tsmiPOU
-            // 
-            this.tsmiPOU.Checked = true;
-            this.tsmiPOU.CheckOnClick = true;
-            this.tsmiPOU.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiPOU.Name = "tsmiPOU";
-            this.tsmiPOU.Size = new System.Drawing.Size(180, 22);
-            this.tsmiPOU.Text = "&Панель POU";
-            this.tsmiPOU.Click += new System.EventHandler(this.tsmiPOU_Click);
             // 
             // frmMain
             // 
@@ -861,11 +884,10 @@ namespace LDEditor
         public SplitContainer splitContainer1;
         public TableLayoutPanel tLPEditor;
         public WFControlLibrary.NewNetwork newNetwork1;
-        private ToolStripButton tbtnAddParalContact;
-        private ToolStripButton toolStripButton11;
-        private ToolStripButton toolStripButton13;
+        private ToolStripButton tsiDelete;
+        private ToolStripButton tsbDeleteLineHoriz;
         private ToolStripButton btnAddLine;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton tsnDeleteLineVert;
         public TabControl tcPOU;
         private TabPage tabPage2;
         private ToolStripButton создатьToolStripButton;
@@ -901,10 +923,13 @@ namespace LDEditor
         private MenuStrip menuStdLD;
         private TreeView treeView1;
         private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
+        private ToolStripButton tsbAddLineVert;
         private DataGridViewTextBoxColumn NameVar;
         private DataGridViewTextBoxColumn TypeVar;
         private DataGridViewTextBoxColumn CommentVar;
         private ToolStripMenuItem tsmiPOU;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton tsbJump;
+        private ToolStripButton toolStripButton1;
     }
 }

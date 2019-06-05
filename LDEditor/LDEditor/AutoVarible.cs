@@ -37,7 +37,7 @@ namespace LDEditor
             {
                 this.Close();
             }
-            Close();
+           
         }
 
         private void textBoxNameVar_TextChanged(object sender, EventArgs e)
