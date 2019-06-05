@@ -33,9 +33,9 @@
             this.labelCommentVar = new System.Windows.Forms.Label();
             this.textBoxNameVar = new System.Windows.Forms.TextBox();
             this.textBoxCommentVar = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbTypeVar = new System.Windows.Forms.ComboBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNameVar
@@ -80,45 +80,47 @@
             this.textBoxCommentVar.Size = new System.Drawing.Size(143, 20);
             this.textBoxCommentVar.TabIndex = 5;
             // 
-            // comboBox1
+            // cbTypeVar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTypeVar.FormattingEnabled = true;
+            this.cbTypeVar.Items.AddRange(new object[] {
             "Bool",
             "String"});
-            this.comboBox1.Location = new System.Drawing.Point(179, 53);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbTypeVar.Location = new System.Drawing.Point(179, 53);
+            this.cbTypeVar.Name = "cbTypeVar";
+            this.cbTypeVar.Size = new System.Drawing.Size(136, 21);
+            this.cbTypeVar.TabIndex = 6;
             // 
-            // button1
+            // btnOK
             // 
-            this.button1.Location = new System.Drawing.Point(372, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK.Location = new System.Drawing.Point(372, 105);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 7;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(37, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(37, 105);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // AutoVarible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 140);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.cbTypeVar);
             this.Controls.Add(this.textBoxCommentVar);
             this.Controls.Add(this.textBoxNameVar);
             this.Controls.Add(this.labelCommentVar);
@@ -140,8 +142,8 @@
         private System.Windows.Forms.Label labelCommentVar;
         private System.Windows.Forms.TextBox textBoxNameVar;
         private System.Windows.Forms.TextBox textBoxCommentVar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbTypeVar;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

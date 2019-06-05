@@ -10,55 +10,22 @@ using System.Windows.Forms;
 using WFControlLibrary;
 using System.Xml.Serialization;
 using System.IO;
+using System.Collections;
 
 namespace LDEditor
 {
-    [Serializable]
+
     public partial class frmEditor : Form
     {
 
-        public string DocName = ""; 
-
+        public string DocName = "";
+        List<Network> networks = new List<Network>();
         public frmEditor()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NewNetwork newNetwork = new NewNetwork();
-            int i = panel1.Controls.Count + 1;
-            newNetwork.Height = 50;
-            newNetwork.AutoSize = false;
-            newNetwork.labelNumNetwork.Text = i.ToString();
-            panel1.Controls.Add(newNetwork);
-
-
-           
-
-            this.Refresh();
-        }
-
-        private void lineHoriz1_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-           
-            //netwo1.Controls.Add(l);
-        }
-
-        private void netwo1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmEditor_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -73,5 +40,36 @@ namespace LDEditor
             ////Закрываем поток
             //filestream.Close();
         }
+
+        private void frmEditor_Load(object sender, EventArgs e)
+        {
+            //Network n = new Network();
+            //tlpEditor.Controls.Add(n);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Network network = new Network();
+            int i = workspace.tlpEditor.Controls.Count + 1;
+            network.Height = 50;
+            network.AutoSize = false;
+            network.Anchor = (AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Left);
+
+            workspace.tlpEditor.Controls.Add(network);
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            foreach (Network n in workspace.tlpEditor.Controls)
+                if (n.ContainsFocus)
+                {
+                    n.AddRowNetwork();
+                }
+        }
     }
 }
+

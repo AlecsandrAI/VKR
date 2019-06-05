@@ -17,6 +17,7 @@ namespace LDEditor
 
     public partial class frmMain : Form
     {
+        string thisNameVar;
         public class FormSize
         {
             public int height;
@@ -188,7 +189,7 @@ namespace LDEditor
                 if (netw.ContainsFocus)
                 {
                     netw.NetElementPanel.Controls.Add(invcontact, 1, 0);
-
+                    
                     break;
                 }
             }
@@ -222,29 +223,26 @@ namespace LDEditor
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Contact contact = new Contact();
-            Point pos1 = new Point(15, 0);
-            int d = 30;
-
-            LineHoriz lnhoriz = new LineHoriz(pos1, d);
+          
             foreach (NewNetwork netw in tLPEditor.Controls)
             {
                 if (netw.ContainsFocus)
                 {
-                    netw.NetElementPanel.Controls.Add(lnhoriz, 1, 0);
-                    netw.NetElementPanel.Controls.Add(contact, 1, 0);
+                    AutoVarible av = new AutoVarible();
                     
-                    netw.NetElementPanel.ColumnCount++;
+                    if (av.ShowDialog(this) == DialogResult.OK)
+                    {
+                        dgvVarTable.Rows.Add(av.NameVar, av.TypeVar, av.CommentVar);
+                        
+                    }
+                    netw.NetElementPanel.Controls.Add(contact, 1, 0);
+
+                    contact.tbVar.Text = av.NameVar;
+                    
 
                     break;
                 }
             }
-
-            //if (ActiveControl is TableLayoutPanel)
-            //{
-
-            //    TableLayoutPanel NetElementPanel = ActiveControl as TableLayoutPanel;
-            //    ActiveControl.Controls.Add(contact, 1, 0);
-            //}
 
         }
 
@@ -257,7 +255,7 @@ namespace LDEditor
                 if (netw.ContainsFocus)
                 {
                     netw.NetElementPanel.Controls.Add(coil, netw.NetElementPanel.ColumnCount - 1, 0);
-                    pGElem.SelectedObject = netw;
+                   
                 }
                 else
                 {
@@ -269,7 +267,7 @@ namespace LDEditor
                             netw.NetElementPanel.Controls.Add(coil, netw.NetElementPanel.ColumnCount - 1, netw.NetElementPanel.GetRow(co) + 1);
                             netw.NetElementPanel.RowCount++;
                             netw.Height = +50;
-                            pGElem.SelectedObject = co;
+                            
                             break;
                         }
                     }
@@ -307,7 +305,7 @@ namespace LDEditor
 
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
-            ParalContact paralcontact = new ParalContact();
+            Contact contact = new Contact();
             foreach (NewNetwork netw in tLPEditor.Controls)
             {
                 if (netw.ContainsFocus)
@@ -315,7 +313,7 @@ namespace LDEditor
 
                     netw.NetElementPanel.RowCount++;
                     netw.Height = netw.Height + 50;
-                    netw.NetElementPanel.Controls.Add(paralcontact, 1, 1);
+                    netw.NetElementPanel.Controls.Add(contact, 1, 1);
                 }
             }
         }
@@ -342,8 +340,7 @@ namespace LDEditor
 
         private void toolStripButton13_Click(object sender, EventArgs e)
         {
-            AutoVarible av = new AutoVarible();
-            av.Show();
+            
         }
 
         private void tLPEditor_Paint(object sender, PaintEventArgs e)
@@ -377,6 +374,67 @@ namespace LDEditor
             filestream.Close();
         }
 
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            NetworkElement networkElement = new NetworkElement();
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+                    
+                    netw.NetElementPanel.Controls.Add(networkElement, 1, 0);
+                   
+                    break;
+                }
+            }
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            NetworkElement n = new NetworkElement();
+            foreach (NewNetwork netw in tLPEditor.Controls)
+            {
+                if (netw.ContainsFocus)
+                {
+                    netw.NetElementPanel.Controls.Add(n);
+                    break;
+                }
+            }
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvVarTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+        }
+
+        private void tLPEditor_ControlAdded(object sender, ControlEventArgs e)
+        {
+            //AutoVarible av = new AutoVarible();
+
+
+            //if (av.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    dgvVarTable.Rows.Add(av.NameVar, av.TypeVar, av.CommentVar);
+                
+
+            //}
+        }
+
+        private void tsmiPOU_Click(object sender, EventArgs e)
+        {
+            sc3.Panel1Collapsed = tsmiPOU.Checked;
+        }
     }
    
 }

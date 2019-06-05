@@ -12,6 +12,9 @@ namespace LDEditor
 {
     public partial class AutoVarible : Form
     {
+        public string CommentVar;
+        public string NameVar;
+        public string TypeVar;
         public AutoVarible()
         {
             InitializeComponent();
@@ -24,8 +27,17 @@ namespace LDEditor
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            this.Close();
+            if (labelCommentVar != null & labelNameVar != null & labelTypeVar != null)
+            {
+                CommentVar = textBoxCommentVar.Text;
+                NameVar = textBoxNameVar.Text;
+                TypeVar = cbTypeVar.SelectedItem.ToString();
+            }
+            else
+            {
+                this.Close();
+            }
+            Close();
         }
 
         private void textBoxNameVar_TextChanged(object sender, EventArgs e)
